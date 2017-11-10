@@ -1,6 +1,7 @@
 package stuff;
 
 import java.io.File;
+import java.io.FilenameFilter;
 
 public class PathMethods {
 
@@ -17,5 +18,14 @@ public class PathMethods {
 		File[] files = in.listFiles();
 
 		return files;
+	}
+	
+	public File[] getTxt(File in) {
+		
+		PathFilter p = new PathFilter();
+		
+		File[] txt = in.listFiles(p);
+		
+		return txt;
 	}
 }

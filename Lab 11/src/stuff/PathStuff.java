@@ -21,9 +21,23 @@ public class PathStuff {
 		
 		//variables
 		File dir = new File("C:\\Code\\Backup\\SPEED");
+		File[] directory;
+		File[] textfiles;
 		
-		//loads all files into the list directory
+		//prints all files in directory
 		p.printFiles(dir);
+		
+		//loads all files into the array directory
+		directory = p.getFiles(dir);
+		
+		//loads all files into the array textfiles
+		textfiles = p.getTxt(dir);
+		for(File f: textfiles) {
+			System.out.println(f);
+		}
+		
+		//checks to see if there is any files missing from the SPEED .txt files
+		//System.out.println(p.isMissing(dir));
 
 	}
 	
