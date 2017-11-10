@@ -24,7 +24,8 @@ public class PathStuff {
 		File[] directory;
 		File[] textfiles;
 		
-		//prints all files in directory
+		//prints all files in the array directory
+		System.out.println("Files in " + dir + ":\n");
 		p.printFiles(dir);
 		
 		//loads all files into the array directory
@@ -32,12 +33,15 @@ public class PathStuff {
 		
 		//loads all files into the array textfiles
 		textfiles = p.getTxt(dir);
+		
+		//prints out all the files in the array textfiles
+		System.out.println("Text files in " + dir + ":\n");
 		for(File f: textfiles) {
 			System.out.println(f);
 		}
 		
 		//checks to see if there is any files missing from the SPEED .txt files
-		//System.out.println(p.isMissing(dir));
+		p.isMissing(dir);
 
 	}
 	
